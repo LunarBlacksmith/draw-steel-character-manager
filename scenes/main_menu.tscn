@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bedyfhpahotw8"]
+[gd_scene load_steps=5 format=3 uid="uid://bedyfhpahotw8"]
+
+[ext_resource type="Theme" uid="uid://dypcdvn1igc3u" path="res://resources/themes/main_menu_btn_font_theme.tres" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://bq4k0oti0ulaq" path="res://assets/images/Generic2.jpg" id="2_ekxnf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vue75"]
-font_size = 31
+font_size = 34
 font_color = Color(0.43086857, 0.69389045, 0.50632155, 1)
 shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.72156864)
+shadow_offset = Vector2(1.5, 3.51)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vue75"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -26,18 +33,93 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Title" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.06720977
-anchor_top = 0.08928572
-anchor_right = 0.92869246
-anchor_bottom = 0.14136092
+anchor_left = 0.048879836
+anchor_top = 0.030075189
+anchor_right = 0.94498575
+anchor_bottom = 0.15075941
 offset_right = 0.011993408
 offset_bottom = -0.40802002
-text = "This is only the beginning >:)"
+text = "TTRPG Character Manager"
 label_settings = SubResource("LabelSettings_vue75")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="MenuOptions_pnl_cont" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13100001
+anchor_top = 0.5521642
+anchor_right = 0.869
+anchor_bottom = 0.96916425
+offset_left = -0.31824875
+offset_top = 0.079956055
+offset_right = -0.072021484
+offset_bottom = 0.27557373
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vue75")
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuOptions_mrg_cont" type="MarginContainer" parent="Control/MenuOptions_pnl_cont"]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="MenuOptions_vcont" type="VBoxContainer" parent="Control/MenuOptions_pnl_cont/MenuOptions_mrg_cont"]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+theme_override_constants/separation = 29
+alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="CreateCharacter_btn" type="Button" parent="Control/MenuOptions_pnl_cont/MenuOptions_mrg_cont/MenuOptions_vcont"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Create Character"
+autowrap_mode = 3
+
+[node name="ManageTemplates_btn" type="Button" parent="Control/MenuOptions_pnl_cont/MenuOptions_mrg_cont/MenuOptions_vcont"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Manage Templates"
+autowrap_mode = 3
+
+[node name="ViewCharacters_btn" type="Button" parent="Control/MenuOptions_pnl_cont/MenuOptions_mrg_cont/MenuOptions_vcont"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "View Characters"
+autowrap_mode = 3
+
+[node name="Settings_btn" type="Button" parent="Control/MenuOptions_pnl_cont/MenuOptions_mrg_cont/MenuOptions_vcont"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.164
+anchor_top = 0.187
+anchor_right = 0.836
+anchor_bottom = 0.49300003
+offset_left = -0.03200531
+offset_top = -0.46400452
+offset_right = 0.031982422
+offset_bottom = -0.4960327
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/PanelContainer/MarginContainer"]
+position = Vector2(164, 160)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ekxnf")
