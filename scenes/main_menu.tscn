@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bedyfhpahotw8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vue75"]
+font_size = 31
+font_color = Color(0.43086857, 0.69389045, 0.50632155, 1)
+shadow_size = 3
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06720977
+anchor_top = 0.08928572
+anchor_right = 0.92869246
+anchor_bottom = 0.14136092
+offset_right = 0.011993408
+offset_bottom = -0.40802002
+text = "This is only the beginning >:)"
+label_settings = SubResource("LabelSettings_vue75")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true

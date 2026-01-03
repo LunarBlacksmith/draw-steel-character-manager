@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Draw Steel Character Manager"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=491
+window/size/viewport_height=1064
+window/handheld/orientation=1
 
 [dotnet]
 
