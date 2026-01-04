@@ -17,14 +17,23 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=488
-window/size/viewport_height=1072
-window/stretch/mode="viewport"
+window/size/viewport_width=1464
+window/size/viewport_height=3216
+window/size/minimize_disabled=true
+window/size/window_width_override=488
+window/size/window_height_override=1072
+window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
 [dotnet]
 
 project/assembly_name="Draw Steel Character Manager"
+
+[editor]
+
+naming/node_name_casing=2
+naming/scene_name_casing=1
+naming/script_name_casing=1
 
 [rendering]
 
