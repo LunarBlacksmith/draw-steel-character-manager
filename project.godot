@@ -10,9 +10,20 @@ config_version=5
 
 [application]
 
-config/name="Draw Steel Character Manager"
+config/name="Draw-Steel-Character-Manager"
+config/description="A character creation and management app for the TTRPG game, Draw Steel.
+You can:
+- Create a character sheet with no templates attached
+- Create a character sheet with only a character sheet template attached
+- Create a character sheet with both a character sheet & class template attached
+- Create character sheet templates (to make your character look aesthetically pleasing and easier to read for yourself)
+- Create class templates (to govern abilities, features, actions, etc for a character)
+- Edit individual templates & characters
+- Bulk edit individual templates & characters
+- Delete templates & characters
+- Share templates & characters (so that others can use them in their app)"
 run/main_scene="res://scenes/main_menu.tscn"
-config/features=PackedStringArray("4.5", "Mobile")
+config/features=PackedStringArray("4.5", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [display]

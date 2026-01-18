@@ -6,6 +6,7 @@ public partial class MainMenu : Control
 	public override void _EnterTree()
 	{
 		GD.Print($"MainMenu enter tree, {Name}, {GetInstanceId()}");
+		// GD.PrintErr("This is an error message from MainMenu.");
 	}
 
 	// Called when the node enters the scene tree for the first time.
